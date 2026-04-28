@@ -81,25 +81,33 @@ npm run dev
 
 ## Project Structure
 ```
-Novateck2/
+CSCE-4901NovaTeck/
 ├── database/
-│   └── novatek_schema_v2.sql
+│   └── novatek_schema_v2.sql       # MySQL schema (Module 4.0 - Shubekshya)
+│
 ├── backend/
-│   ├── app.py            Flask API (all endpoints)
-│   ├── db.py             CRUD operations (Module 4.0)
-│   ├── nlp_tagger.py     NLP skill tagger (Module 3.0)
-│   ├── seed_jobs.py      51 seed jobs + NLP pipeline
-│   ├── requirements.txt
-│   └── .env.example
-└── frontend/
+│   ├── crawler/                    # ⭐ NEW - Module 2.0 (Suraj)
+│   │   ├── crawler.py              # Web crawler with robots.txt compliance
+│   │   ├── jobs.json               # Output: 55 jobs from 3 DFW companies
+│   │   ├── crawler.log             # Execution log (proof of compliance)
+│   │   ├── requirements.txt        # requests, beautifulsoup4
+│   │   └── README.md               # Crawler documentation
+│   │
+│   ├── app.py                      # Flask API - all endpoints (Module 3.0 - Mani)
+│   ├── db.py                       # CRUD operations (Module 4.0 - Shubekshya)
+│   ├── nlp_tagger.py               # NLP skill tagger (Module 3.0 - Mani)
+│   ├── seed_jobs.py                # 51 hardcoded seed jobs (fallback)
+│   ├── seed_from_crawler.py        # ⭐ NEW - Connects crawler → database
+│   ├── requirements.txt            # Python dependencies
+│   └── .env.example                # Environment template
+│
+└── frontend/                       # Module 5.0 - Udij
     ├── src/
     │   ├── App.jsx
     │   └── main.jsx
     ├── index.html
     ├── package.json
     └── vite.config.js
-```
-
 ---
 
 ## Team Responsibilities
